@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="studentbean" class="com.java.spring.Student" scope="singleton">
+		<property name="name" value="Vimal Jaiswal"></property>
+	</bean>
+
+	<bean id="teacherbean" class="com.java.spring.Teacher" scope="singleton"
+		init-method="init" destroy-method="destroy">
+		<property name="name" value="Dr. Amit Singh"></property>
+	</bean>
+
+	<!-- To use @PostConstruct & @PreDestroy annotations, you need to add a 
+		bean in XML name: CommonAnnotationBeanPostProcessor or add context:annotation-config -->
+
+	<bean
+		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+
+	<!-- <context:annotation-config/> -->
+
+	<bean id="schoolbean" class="com.java.spring.School" scope="singleton">
+		<property name="name" value="DPS, Delhi"></property>
+	</bean>
+
+</beans> 
