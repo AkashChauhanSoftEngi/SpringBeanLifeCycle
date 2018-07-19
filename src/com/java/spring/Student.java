@@ -14,25 +14,22 @@ public class Student implements InitializingBean, DisposableBean{
 	}
 
 	public Student() {
-		System.out.println("Student Object Created");
+		System.out.println("Student: Object is Created");
 	}
 
 	public void setName(String name) {
 		this.name = name;
-		System.out.println("afterPropertiesSet() will run now");
+		System.out.println("Student: Properties have been set");
 	}
 
-	public void displayInfo() {
-		System.out.println("Hello This is, " + name);
-	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("Student Object, runing after properties has been set ");
+		System.out.println("Student: afterPropertiesSet() runing after properties has been set ");
 	}
 	
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("Student Object, after running destroy(), bean is going to distroy");
+		System.out.println("Student: bean is going to distroy");
 	}
 }

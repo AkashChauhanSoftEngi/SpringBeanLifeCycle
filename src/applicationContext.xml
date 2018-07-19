@@ -27,5 +27,7 @@
 	<bean id="schoolbean" class="com.java.spring.School" scope="singleton">
 		<property name="name" value="DPS, Delhi"></property>
 	</bean>
+	
+	<bean class="com.java.spring.Common"/>
 
 </beans> 

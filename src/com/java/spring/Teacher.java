@@ -12,8 +12,8 @@ public class Teacher {
 	private String name;
 
 	private Teacher(){
-		System.out.println("Teacher object is created");
-		System.out.println("init() will execute now");
+		System.out.println("Teacher: object is created");
+		System.out.println("Teacher: init() will execute now");
 	}
 	
 	public String getName() {
@@ -24,16 +24,13 @@ public class Teacher {
 		this.name = name;
 	}
 	
-	public void displayInfo() {
-		System.out.println("Hello This is, " + name);
-	}
 	
 	public void init() throws Exception {
-		System.out.println("Teacher Object: init() will be executed after properties has been set ");
+		System.out.println("Teacher: init() is executing after properties have been set");
 	}
 	
 	public void destroy() throws Exception {
-		System.out.println("Teacher Object: after running destroy(), this bean is going to distroy");
+		System.out.println("Teacher: bean is going to distroy");
 	}
 
 }

@@ -16,15 +16,9 @@ public class Test {
 		System.out.println();
 		
 		/* Only one object is created as by default it is singleton */
-		Student student1 = (Student) ap.getBean("studentbean");
-		student1.displayInfo();
-
-		/* Spring also access private constructors of the class */
-		Teacher teacher = (Teacher) ap.getBean("teacherbean");
-		teacher.displayInfo();
-		
-		School school = (School) ap.getBean("schoolbean");
-		school.displayInfo();
+		ap.getBean("studentbean");
+		ap.getBean("teacherbean");
+		ap.getBean("schoolbean");
 		
 		/*if you do not close it, preDestory methods would not be called*/
 		((AbstractApplicationContext) ap).close();

@@ -18,12 +18,12 @@ public class School {
 	
 	@PostConstruct
 	public void init() throws Exception {
-		System.out.println("School Object: init() will be executed after properties has been set ");
+		System.out.println("School: init() is running after properties has been set ");
 	}
 	
 	@PreDestroy
 	public void destroy() throws Exception {
-		System.out.println("School Object: bean is going to distroy");
+		System.out.println("School: bean is going to distroy");
 	}
 	
 	public void displayInfo() {
